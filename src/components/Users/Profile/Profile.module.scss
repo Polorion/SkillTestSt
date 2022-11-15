@@ -1,0 +1,108 @@
+.info {
+  display: flex;
+  .text {
+    padding-left: 130px;
+    flex: 1 1 70%;
+    padding-right: 150px;
+    font-size: 30px;
+  }
+  .contact {
+    flex: 0 0 30%;
+    a {
+      display: flex;
+      align-items: center;
+      &:hover {
+        svg {
+          path {
+            fill: var(--red);
+          }
+        }
+      }
+      svg {
+        path {
+          transition: all 0.5s ease;
+        }
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  .infoImg {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    .fullName {
+      margin-bottom: 10px;
+      font-size: 60px;
+      span {
+        margin-right: 10px;
+      }
+    }
+    .infoEmail {
+      font-size: 32px;
+    }
+  }
+  a {
+    margin-right: 30px;
+  }
+  .img {
+    margin-right: 30px;
+    img {
+      border-radius: 100px;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .body {
+    width: 100%;
+    a {
+      margin-right: 0px !important;
+    }
+    .infoImg {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 50px auto 0 auto;
+      .img {
+        margin-right: 0px;
+        margin-top: 30px;
+      }
+      .infoPersona {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .fullName {
+          font-size: 130%;
+        }
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    .text {
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 30px;
+    }
+    .contact {
+      a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}

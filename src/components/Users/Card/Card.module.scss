@@ -1,0 +1,66 @@
+.card {
+  flex: 0 0 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 0 20px;
+
+  .cardBody {
+    padding: 10% 20%;
+    background-color: var(--white);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    transition: all ease 0.5s;
+    position: relative;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .like {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+
+      &.active {
+        svg {
+          fill: red;
+        }
+      }
+
+      svg {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        &:hover {
+          fill: red;
+        }
+        path {
+          stroke: var(--black);
+        }
+      }
+    }
+  }
+  img {
+    cursor: pointer;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    transition: all 0.1s ease;
+    &:hover {
+      outline: 2px solid var(--violet);
+      outline-offset: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .card {
+    flex: 0 0 50%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}

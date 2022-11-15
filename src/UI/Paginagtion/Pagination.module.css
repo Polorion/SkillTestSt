@@ -1,0 +1,27 @@
+.body {
+  display: flex;
+  margin-bottom: 30px;
+}
+.button {
+  font-size: 20px;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  border: 2px solid #0064a1;
+  background-color: #ece9e9;
+  border-radius: 10px;
+  color: #062e85;
+}
+
+.button:hover {
+  color: var(--green);
+  background-color: var(--blue);
+}
+.active {
+  color: var(--green);
+  background-color: var(--blue);
+}
